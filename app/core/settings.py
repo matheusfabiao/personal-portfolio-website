@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.getenv('DB_ENGINE', 'CHANGE-ME'),
-        'NAME': os.getenv('POSTGTRES_DB', 'CHANGE-ME'),
-        'USER': os.getenv('POSTGRES_USER', 'CHANGE-ME'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'CHANGE-ME'),
-        'HOST': os.getenv('POSTGRES_HOST', 'CHANGE-ME'),
-        'PORT': os.getenv('POSTGRES_PORT', 'CHANGE-ME'),
+        'ENGINE': os.getenv('DB_ENGINE', 'change-me'),
+        'NAME': os.getenv('POSTGRES_DB', 'change-me'),
+        'USER': os.getenv('POSTGRES_USER', 'change-me'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'change-me'),
+        'HOST': os.getenv('POSTGRES_HOST', 'change-me'),
+        'PORT': os.getenv('POSTGRES_PORT', 'change-me'),
     }
 }
 

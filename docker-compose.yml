@@ -1,0 +1,24 @@
+services:
+  matheus_fabiao_portfolio:
+    container_name: matheus_fabiao_portfolio
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./app:/app
+      - ./data/web/static:/data/web/static
+      - ./data/web/media:/data/web/media
+    env_file:
+      - ./dotenv_files/.env
+    depends_on:
+      - postgres
+  
+  postgres:
+    container_name: postgres
+    image: postgres:14-alpine
+    volumes:
+      - ./data/postgres/data:/var/lib/postgresql/data
+    env_file:
+      - ./dotenv_files/.env
